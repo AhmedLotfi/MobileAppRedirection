@@ -7,9 +7,9 @@
 <body>
     <script>
       
-  alert(getMobileOperatingSystem());
+   redirect();
 
-    function getMobileOperatingSystem() {
+    function redirect() {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       if (/windows phone/i.test(userAgent)) {
@@ -17,14 +17,14 @@
       }
 
       if (/android/i.test(userAgent)) {
-        return "Android";
+        return window.location.href = 'https://play.google.com/store/apps/details?id=com.enoc.pay';
       }
 
       if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return "iOS";
+         return window.location.href = 'https://apps.apple.com/ae/app/enoc-pay/id1395158011';
       }
 
-      return "unknown";
+     return window.location.href = 'https://play.google.com/store/apps/details?id=com.enoc.pay';
     }
 
   </script>
